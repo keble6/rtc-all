@@ -11,7 +11,7 @@ function readTime () {
 input.onButtonPressed(Button.A, function () {
     readTime()
     basic.showString(dateTime)
-    serial.writeString(dateTime)
+    serial.writeLine(dateTime)
 })
 serial.onDataReceived(serial.delimiters(Delimiters.CarriageReturn), function () {
     stringIn = serial.readUntil(serial.delimiters(Delimiters.CarriageReturn))
